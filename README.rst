@@ -34,7 +34,6 @@ Requirements
     django-crispy-forms >= 1.4.0
     django-ipware >= 0.0.8
     bleach >= 1.4
-    six >= 1.6.1
 
 Installation
 ============
