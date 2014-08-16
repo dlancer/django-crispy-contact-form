@@ -10,19 +10,15 @@ try:
 except ImportError:
     raise 'django-crispy-contact-form application required bleach package'
 
-try:
-    from braces.views import FormMessagesMixin
-except ImportError:
-    raise 'django-crispy-contact-form application required django-braces package'
-
 
 from contact_form.conf import settings
 from contact_form.forms import ContactForm, ContactFormCaptcha
 from contact_form.signals import contact_form_valid, contact_form_invalid
+from contact_form.mixins import FormMessageMixin
 from contact_form.helpers import get_user_ip
 
 
-class ContactFormView(FormMessagesMixin, CreateView):
+class ContactFormView(FormMessageMixin, CreateView):
     """Contact form view"""
 
     template_name = 'contact_form/form.html'

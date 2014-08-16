@@ -12,7 +12,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.sites',
     'crispy_forms',
-    'braces',
     'captcha',
     'contact_form'
 )
