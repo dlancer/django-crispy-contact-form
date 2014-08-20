@@ -10,11 +10,11 @@ try:
 except ImportError:
     raise 'django-crispy-contact-form application required bleach package'
 
+from appcore.views.mixins import FormMessageMixin
 
 from contact_form.conf import settings
 from contact_form.forms import ContactForm, ContactFormCaptcha
 from contact_form.signals import contact_form_valid, contact_form_invalid
-from contact_form.mixins import FormMessageMixin
 from contact_form.helpers import get_user_ip
 
 
