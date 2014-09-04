@@ -20,7 +20,8 @@ else:
 def runtests():
     test_runner = TestRunner(verbosity=1, interactive=True, failfast=False)
     failures = test_runner.run_tests(['contact_form'])
-    os.unlink('test.db')
+    if os.path.isfile('test.db'):
+        os.unlink('test.db')
     return bool(failures)
 
 if __name__ == '__main__':
