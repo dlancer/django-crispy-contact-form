@@ -7,7 +7,7 @@ form settings (you'll need the Admin app enabled).
 Visit http://127.0.0.1:8000/contact_form/ to use contact form.
 
 This contact form do not send messages or emails. All submitted information stored in the database
-and optional Django signals generated about submission. You may setup your own handlers for this signals.
+and optional Django signals generated after submission. You may setup your own handlers for this signals.
 
 Configuration
 =============

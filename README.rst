@@ -29,11 +29,13 @@ Requirements
 
 ::
 
-    django >= 1.5
-    django-simple-captcha >= 0.4.2
-    django-crispy-forms >= 1.4.0
-    django-ipware >= 0.0.8
-    bleach >= 1.4
+    Django>=1.5
+    django-appcore==0.0.2
+    django-simple-captcha>=0.4.2
+    django-crispy-forms>=1.4.0
+    django-ipware>=0.0.8
+    bleach>=1.4
+
 
 Usage
 =====
