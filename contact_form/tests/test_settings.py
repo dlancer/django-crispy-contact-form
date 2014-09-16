@@ -4,6 +4,10 @@ SITE_ID = 1
 
 BASE_DIR = os.path.dirname(__file__)
 
+ROOT_URLCONF = 'urls'
+SECRET_KEY = 'secretkey'
+SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
+
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.sessions',
@@ -38,8 +42,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.messages.context_processors.messages',
 )
 
-ROOT_URLCONF = 'urls'
-SECRET_KEY = 'secretkey'
-SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 CRISPY_TEMPLATE_PACK = 'bootstrap'
