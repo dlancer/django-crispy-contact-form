@@ -7,7 +7,7 @@ form settings (you'll need the Admin app enabled).
 Visit http://127.0.0.1:8000/contact_form/ to use contact form.
 
 This contact form do not send messages or emails. All submitted information stored in the database
-and optional Django signals generated after submission. You may setup your own handlers for this signals.
+and optional Django signals generated after submission. You may setup your own handlers for these signals.
 
 Configuration
 =============
@@ -57,7 +57,7 @@ Customizing contact form
 You have a lot of options available to you to customize ``django-crispy-contact-form``.
 These options should be defined in your ``settings.py`` file.
 
-**Contact form logic customization**
+**Contact form customization**
 
 * ``CONTACT_FORM_USE_CAPTCHA``: force use captcha for anonymous users
 
