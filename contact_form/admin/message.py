@@ -4,14 +4,13 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 from django.utils.translation import ugettext as _
-from django.conf import settings as django_settings
 
-from contact_form.models import *
 from contact_form.conf import settings
+from contact_form.models import *
 
 
 class MessageAdmin(admin.ModelAdmin):
-    if hasattr(django_settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
+    if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
         list_display = ('subject', 'sender', 'ip', 'site', 'date_created_short')
         list_filter = ('date_created', 'subject')
         search_fields = ('sender_name', 'ip', 'site', 'date_created')

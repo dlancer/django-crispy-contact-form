@@ -3,7 +3,6 @@
 from __future__ import unicode_literals
 
 from django.views.generic import CreateView
-from django.conf import settings as django_settings
 
 try:
     import bleach
@@ -54,9 +53,9 @@ class ContactFormView(FormMessageMixin, CreateView):
                 if hasattr(user, settings.CONTACT_FORM_USER_EMAIL_FIELD):
                     sender_email = getattr(user, settings.CONTACT_FORM_USER_EMAIL_FIELD)
         initial = {'sender_name': sender_name, 'sender_email': sender_email}
-        if hasattr(django_settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
+        if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
             from django.contrib.sites.models import Site
-            site = Site.objects.get(id=django_settings.SITE_ID)
+            site = Site.objects.get(id=settings.SITE_ID)
             self.site = site
         return initial
 

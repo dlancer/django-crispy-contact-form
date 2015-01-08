@@ -31,6 +31,7 @@ Requirements
 
     Django>=1.5
     django-appcore==0.0.3
+    django-appconf>=0.6
     django-simple-captcha>=0.4.3
     django-crispy-forms>=1.4.0
     django-ipware>=0.0.8

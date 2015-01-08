@@ -4,8 +4,6 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.utils.translation import ugettext_lazy as _
-from django.conf import settings as django_settings
-
 
 try:
     import bleach
@@ -30,8 +28,8 @@ from contact_form.models import Message, Subject
 class ContactForm(forms.ModelForm):
     """ContactForm form"""
 
-    if hasattr(django_settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
-        queryset = Subject.objects.filter(site__id=django_settings.SITE_ID)
+    if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
+        queryset = Subject.objects.filter(site__id=settings.SITE_ID)
     else:
         queryset = Subject.objects.all()
     subject = forms.ModelChoiceField(queryset=queryset,
