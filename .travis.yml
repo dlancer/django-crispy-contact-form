@@ -16,7 +16,7 @@ install:
   - pip install flake8
 
 before_script:
-  - flake8 --exclude=south_migrations --ignore=E501,E225,E128,E126,F401,F403 contact_form
+  - flake8 --exclude=south_migrations --ignore=E501,E225,E128,E126,E402,F401,F403 contact_form
   - cd contact_form/tests
 
 script: python ./runtests.py
