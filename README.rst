@@ -31,7 +31,7 @@ Requirements
 
     Django>=1.5
     django-appcore==0.0.4
-    django-simple-captcha>=0.4.4
+    django-simple-captcha>=0.4.5
     django-crispy-forms>=1.4.0
     django-ipware>=0.1.1
     bleach>=1.4
