@@ -7,19 +7,19 @@ Customizable contact form based on crispy-forms
     :target: https://travis-ci.org/dlancer/django-crispy-contact-form/
     :alt: Build status
 
-.. image:: https://pypip.in/version/django-crispy-contact-form/badge.svg
+.. image:: https://img.shields.io/pypi/v/django-crispy-contact-form.svg
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: Latest PyPI version
 
-.. image:: https://pypip.in/download/django-crispy-contact-form/badge.svg
+.. image:: https://img.shields.io/pypi/dm/django-crispy-contact-form.svg
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: Number of PyPI downloads
 
-.. image:: https://pypip.in/format/django-crispy-contact-form/badge.svg
+.. image:: https://img.shields.io/pypi/format/django-crispy-contact-form.svg
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: Download format
 
-.. image:: https://pypip.in/license/django-crispy-contact-form/badge.svg
+.. image:: https://img.shields.io/pypi/l/django-crispy-contact-form.svg
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: License
 
