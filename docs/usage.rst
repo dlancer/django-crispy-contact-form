@@ -17,7 +17,6 @@ You must add these apps to your list of ``INSTALLED_APPS`` in ``settings.py``::
     INSTALLED_APPS = (
         ...
         'captcha',
-        'braces',
         'crispy_forms',
         'contact_form',
     )
