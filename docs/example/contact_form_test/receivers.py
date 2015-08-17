@@ -1,12 +1,12 @@
+from contact_form.signals import contact_form_valid
+from django.core.mail import send_mail
 
-from contact_form.signals import contact_form_valid, contact_form_invalid
 
-
-def my_callback1(sender, **kwargs):
+def sendmail_callback(sender, **kwargs):
     if kwargs['event'] == 'CONTACT_FORM_VALID_MESSAGE':
-        print('Form submitted!')
+        send_mail(kwargs['subject'], kwargs['message'], kwargs['sender_email'], 'from@adress.com')
 
-contact_form_valid.connect(my_callback1)
+contact_form_valid.connect(sendmail_callback)
 
 
 def my_callback2(sender, **kwargs):
