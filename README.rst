@@ -30,8 +30,9 @@ Requirements
 ::
 
     Django>=1.5
-    django-appcore==0.0.5
-    django-simple-captcha>=0.4.5
+    Pillow>=2.9.0
+    django-appcore>=0.0.6
+    django-simple-captcha>=0.4.6
     django-crispy-forms>=1.4.0
     django-ipware>=1.0.0
     bleach>=1.4

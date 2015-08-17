@@ -103,3 +103,10 @@ These options should be defined in your ``settings.py`` file.
 * ``CONTACT_FORM_DEPARTMENT_NAME_MAX_LENGTH``: department name maximum length
 
 * ``CONTACT_FORM_DEPARTMENT_PHONE_MAX_LENGTH``: department phone maximum length
+
+
+Bootstrap based layout support
+------------------------------
+
+At the moment only ``uni_form`` form layout is supported, for bootstrap or custom form layout,
+you should rewrite ``ContactForm`` and ``ContactFormCaptcha`` classes from forms.py
