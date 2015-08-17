@@ -136,4 +136,4 @@ class ContactFormCaptcha(ContactForm):
         self.helper.form_method = 'POST'
         self.helper.form_style = 'inline'
 
-        super(ContactFormCaptcha, self).__init__(*args, **kwargs)
+        super(ContactForm, self).__init__(*args, **kwargs)
