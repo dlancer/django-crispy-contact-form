@@ -1,4 +1,4 @@
-from contact_form.signals import contact_form_valid
+from contact_form.signals import contact_form_valid, contact_form_invalid
 from django.core.mail import send_mail
 
 
