@@ -3,4 +3,5 @@ include README.rst
 include requirements.txt
 recursive-include contact_form/static *
 recursive-include contact_form/templates *
+recursive-include contact_form/locale *
 recursive-include docs *
