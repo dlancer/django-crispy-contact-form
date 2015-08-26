@@ -35,7 +35,7 @@ msgid "Contact Form"
 msgstr "Contact"
 
 #: conf.py:22
-msgid "Your message is submitted."
+msgid "Your message is submitted"
 msgstr "Votre message a été envoyé"
 
 #: conf.py:28
@@ -63,7 +63,7 @@ msgid "Your e-mail"
 msgstr "Votre email"
 
 #: forms.py:48
-msgid "Please enter your email."
+msgid "Please enter your email"
 msgstr "Merci d'entrer votre email"
 
 #: forms.py:49
