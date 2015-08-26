@@ -74,7 +74,7 @@ msgstr "Ваше сообщение"
 #: forms.py:52
 #, python-brace-format
 msgid "Your message ({0} characters minimum)"
-msgstr ""
+msgstr "Ваше сообщение ({0} символов минимум)"
 
 #: forms.py:55
 msgid "Please enter your message"
