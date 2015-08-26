@@ -45,7 +45,7 @@ class ContactForm(forms.ModelForm):
     # maxlength is 254 characters for compliant with RFCs 3696 and 5321
     sender_email = forms.EmailField(label=_('Your e-mail'),
                                     widget=forms.TextInput(attrs={'maxlength': 254}),
-                                    error_messages={'required': _('Please enter your email.')})
+                                    error_messages={'required': _('Please enter your email')})
     message = forms.CharField(label=_('Your message'),
                               widget=forms.Textarea(attrs={'maxlength': settings.CONTACT_FORM_MESSAGE_MAX_LENGTH}),
                               min_length=settings.CONTACT_FORM_MESSAGE_MIN_LENGTH,

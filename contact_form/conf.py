@@ -19,7 +19,7 @@ class ContactFormAppConf(AppConf):
     VALID_MESSAGE = getattr(
         settings,
         'CONTACT_FORM_VALID_MESSAGE',
-        _('Your message is submitted.')
+        _('Your message is submitted')
     )
 
     INVALID_MESSAGE = getattr(
