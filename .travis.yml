@@ -11,6 +11,11 @@ env:
   - DJANGO="django==1.6.11"
   - DJANGO="django==1.5.12"
 
+matrix:
+  include:
+    - python: "3.5"
+      env: DJANGO="django==1.8.4"
+
 install:
   - pip install $DJANGO
   - pip install -e .
