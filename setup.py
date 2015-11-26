@@ -16,7 +16,7 @@ setup(
     include_package_data=True,
     install_requires=reqs,
     license='BSD',
-    description='Customizable contact form based on crispy-forms with captcha support for Django 1.5+',
+    description='Customizable contact form based on crispy-forms with captcha support for Django 1.7+',
     long_description=README,
     url='https://github.com/dlancer/django-crispy-contact-form',
     author='dlancer',
