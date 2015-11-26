@@ -1,8 +1,7 @@
 """
 Django migrations for contact_form app
 
-This package does not contain South migrations.  South migrations can be found
-in the ``south_migrations`` package.
+This package does not contain South migrations.
 """
 
 SOUTH_ERROR_MESSAGE = """\n
