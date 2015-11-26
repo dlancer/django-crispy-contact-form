@@ -36,7 +36,6 @@ that are necessary for operation.
 Database migration
 ------------------
 
-If you use Django 1.5+ you can use database migration by add South application to your django settings.
 Django 1.7+ has native database migration support.
 
 Multilingual support

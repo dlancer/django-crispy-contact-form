@@ -39,8 +39,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     # optional
     # 'modeltranslation',
-    # should be enabled only for Django < 1.7
-    #'south',
     'captcha',
     'crispy_forms',
     'contact_form',
