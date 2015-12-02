@@ -30,8 +30,8 @@ Include the contact form URLconf in your project urls.py like this::
         url(r'^contact_form/', include('contact_form.urls')),
     )
 
-Run ``python manage.py syncdb``.  This creates the appropriate tables in your database
-that are necessary for operation.
+Run ``python manage.py syncdb``.
+This creates the appropriate tables in your database that are necessary for operation.
 
 Database migration
 ------------------
