@@ -22,10 +22,12 @@ except ImportError:
 
 class SubjectAdmin(SubjectBaseAdmin):
     if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
-        list_display = ('title', 'department_url', 'site')
+        list_display = ('title', 'department_url', 'site', 'order',)
     else:
-        list_display = ('title', 'department_url')
-        exclude = ('site', )
+        list_display = ('title', 'department_url', 'order',)
+        exclude = ('site',)
+    list_editable = ('order',)
+    ordering = ('order',)
 
     def department_url(self, obj):
         change_url = urlresolvers.reverse('admin:contact_form_department_change', args=(obj.department.id,))

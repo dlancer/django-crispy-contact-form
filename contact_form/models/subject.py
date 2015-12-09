@@ -16,6 +16,7 @@ class Subject(models.Model):
     title = models.CharField(max_length=settings.CONTACT_FORM_SUBJECT_MAX_LENGTH)
     department = models.ForeignKey(Department)
     description = models.TextField(blank=True)
+    order = models.PositiveIntegerField(default=0)
     site = models.ForeignKey(Site, null=True, blank=True)
 
     def __str__(self):

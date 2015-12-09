@@ -29,9 +29,9 @@ class ContactForm(forms.ModelForm):
     """ContactForm form"""
 
     if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
-        queryset = Subject.objects.filter(site__id=settings.SITE_ID)
+        queryset = Subject.objects.filter(site__id=settings.SITE_ID).order_by(settings.CONTACT_FORM_SUBJECTS_ORDER_BY)
     else:
-        queryset = Subject.objects.all()
+        queryset = Subject.objects.order_by(settings.CONTACT_FORM_SUBJECTS_ORDER_BY)
     subject = forms.ModelChoiceField(queryset=queryset,
                                      widget=forms.Select(),
                                      label=_('Message subject'),

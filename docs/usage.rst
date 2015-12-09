@@ -103,6 +103,7 @@ These options should be defined in your ``settings.py`` file.
 
 * ``CONTACT_FORM_DEPARTMENT_PHONE_MAX_LENGTH``: department phone maximum length
 
+* ``CONTACT_FORM_SUBJECTS_ORDER_BY``: field for subjects sorting (default: 'order')
 
 Bootstrap based layout support
 ------------------------------

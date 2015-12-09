@@ -41,5 +41,7 @@ class ContactFormAppConf(AppConf):
     DEPARTMENT_NAME_MAX_LENGTH = getattr(settings, 'CONTACT_FORM_DEPARTMENT_NAME_MAX_LENGTH', 80)
     DEPARTMENT_PHONE_MAX_LENGTH = getattr(settings, 'CONTACT_FORM_DEPARTMENT_PHONE_MAX_LENGTH', 20)
 
+    SUBJECTS_ORDER_BY = getattr(settings, 'settings.CONTACT_FORM_SUBJECTS_ORDER_BY', 'order')
+
     class Meta:
         prefix = 'contact_form'
