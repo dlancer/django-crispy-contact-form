@@ -31,7 +31,7 @@ Requirements
 
     Django>=1.7
     Pillow>=2.9.0
-    django-appcore>=0.0.6
+    django-appcore>=0.0.8
     django-simple-captcha>=0.4.6
     django-crispy-forms>=1.5.2
     django-ipware>=1.1.2
