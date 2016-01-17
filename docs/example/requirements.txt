@@ -1,1 +1,1 @@
-django-crispy-contact-form>=0.2.3
+django-crispy-contact-form>=0.2.4
