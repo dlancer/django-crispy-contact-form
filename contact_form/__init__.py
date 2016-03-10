@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-VERSION = (0, 2, 5, 'dev')
+VERSION = (0, 2, 5, 'stable')
 
 
 def get_release():
