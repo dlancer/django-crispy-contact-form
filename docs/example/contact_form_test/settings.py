@@ -53,6 +53,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+# Templates settings
+TEMPLATE_DIRS = tuple([os.path.join(BASE_DIR, app_name, 'templates') for app_name in INSTALLED_APPS])
+TEMPLATE_DIRS += tuple([os.path.join(BASE_DIR, 'templates')])
+
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'django.core.context_processors.request',
@@ -109,7 +113,6 @@ CRISPY_TEMPLATE_PACK = 'uni_form'
 CAPTCHA_FONT_PATH = os.path.join(BASE_DIR, '_fonts/DroidSans.ttf')
 CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.random_char_challenge'
 CAPTCHA_LETTER_ROTATION = (-5, 5)
-CAPTCHA_OUTPUT_FORMAT = u'%(image)s %(text_field)s %(hidden_field)s'
 CAPTCHA_FOREGROUND_COLOR = '#201500'
 CAPTCHA_NOISE_FUNCTIONS = ('captcha.helpers.noise_dots',)
 

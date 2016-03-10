@@ -110,3 +110,12 @@ Bootstrap based layout support
 
 At the moment only ``uni_form`` form layout is supported, for bootstrap or custom form layout,
 you should rewrite ``ContactForm`` and ``ContactFormCaptcha`` classes from forms.py
+
+
+Captcha rendering
+-----------------
+
+If you use ``django-simple-captcha`` package for rendering contact form with captcha support you
+should override captcha field templates (see ``django-simple-captcha`` package documentation) for
+proper form rendering. You can find recommended templates in docs/example/templates/captcha folder within
+``django-crispy-contact-form`` package documentation.
