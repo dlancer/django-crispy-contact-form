@@ -1,7 +1,8 @@
 """Django urls for contact form."""
 
-from django.conf.urls import patterns, url
+from django.conf.urls import url
 
 from contact_form.views import ContactFormView
 
-urlpatterns = patterns('', url(r'^$', ContactFormView.as_view(), name='contact_form'), )
+app_name = 'contact_form'
+urlpatterns = [url(r'^$', ContactFormView.as_view(), name='contact_form')]

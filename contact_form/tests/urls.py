@@ -1,10 +1,9 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import include, url
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     # captcha support urls
     url(r'^captcha/', include('captcha.urls')),
 
     # contact_form
-    (r'^contact_form/', include('contact_form.urls')),
-)
+    url(r'^contact_form/', include('contact_form.urls', namespace='contact_form')),
+]

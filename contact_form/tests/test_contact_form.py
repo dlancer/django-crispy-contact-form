@@ -9,7 +9,7 @@ from contact_form.forms import ContactForm
 class TestContactForm(ContactFormCase):
 
     def test_form_view(self):
-        response = self.client.get(reverse('contact_form'))
+        response = self.client.get(reverse('contact_form:contact_form'))
         self.assertEqual(response.status_code, 200)
 
     def test_valid_form(self):
