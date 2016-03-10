@@ -1,15 +1,21 @@
 # -*- coding: utf-8 -*-
 
-VERSION = (0, 2, 4)
+VERSION = (0, 2, 5, 'dev')
+
+
+def get_release():
+    return '-'.join([get_version(), VERSION[-1]])
 
 
 def get_version():
-    """Returns the version as a human-format string."""
-    return '.'.join([str(i) for i in VERSION])
+    """
+    Returns only digit parts of version.
+    """
+    return '.'.join(str(i) for i in VERSION[:3])
 
 __author__ = 'dlancer'
 __docformat__ = 'restructuredtext en'
-__copyright__ = 'Copyright 2014-2015, dlancer'
+__copyright__ = 'Copyright 2014-2016, dlancer'
 __license__ = 'BSD'
 __version__ = get_version()
 __maintainer__ = 'dlancer'
