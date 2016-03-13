@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 
 from contact_form.conf import settings
-from contact_form.models import *
+from contact_form.models import Department
 
 
 class DepartmentAdmin(admin.ModelAdmin):

@@ -6,7 +6,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _
 
 from contact_form.conf import settings
-from contact_form.models import *
+from contact_form.models import Message
 
 
 class MessageAdmin(admin.ModelAdmin):
