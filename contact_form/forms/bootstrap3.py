@@ -1,4 +1,4 @@
-"""Implements contact form forms"""
+"""Implements contact form forms for bootstrap template pack"""
 
 from __future__ import unicode_literals
 
@@ -17,7 +17,8 @@ except ImportError:
 
 try:
     from crispy_forms.helper import FormHelper
-    from crispy_forms.layout import Layout, Fieldset, Button, ButtonHolder, Submit
+    from crispy_forms.layout import Layout, Fieldset, Button, Submit
+    from crispy_forms.bootstrap import FormActions
 except ImportError:
     raise 'django-crispy-contact-form application required django-crispy-forms package'
 
@@ -64,6 +65,9 @@ class ContactForm(forms.ModelForm):
         :param kwargs: form keyword args
         """
         self.helper = FormHelper()
+        self.helper.form_class = 'form-horizontal'
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
         layout = Layout(
             Fieldset(
                 _('Contact form'),
@@ -72,16 +76,15 @@ class ContactForm(forms.ModelForm):
                 'sender_email',
                 'message',
             ),
-            ButtonHolder(
-                Button('cancel', _('Cancel'), css_class='secondaryAction'),
-                Submit('submit', _('Submit'), css_class='primaryAction'),
+            FormActions(
+                Button('cancel', _('Cancel')),
+                Submit('submit', _('Submit')),
             )
         )
         self.helper.add_layout(layout)
         self.helper.form_id = 'contact_form'
         self.helper.form_action = ''
         self.helper.form_method = 'POST'
-        self.helper.form_style = 'inline'
 
         super(ContactForm, self).__init__(*args, **kwargs)
 
@@ -116,6 +119,9 @@ class ContactFormCaptcha(ContactForm):
         :param kwargs: form keyword args
         """
         self.helper = FormHelper()
+        self.helper.form_class = 'form-horizontal'
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
         layout = Layout(
             Fieldset(
                 _('Contact form'),
@@ -125,15 +131,14 @@ class ContactFormCaptcha(ContactForm):
                 'message',
                 'captcha',
             ),
-            ButtonHolder(
-                Button('cancel', _('Cancel'), css_class='secondaryAction'),
-                Submit('submit', _('Submit'), css_class='primaryAction'),
+            FormActions(
+                Button('cancel', _('Cancel')),
+                Submit('submit', _('Submit')),
             )
         )
         self.helper.add_layout(layout)
         self.helper.form_id = 'contact_form'
         self.helper.form_action = ''
         self.helper.form_method = 'POST'
-        self.helper.form_style = 'inline'
 
         super(ContactForm, self).__init__(*args, **kwargs)

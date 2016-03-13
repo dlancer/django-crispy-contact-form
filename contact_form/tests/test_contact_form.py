@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.core.urlresolvers import reverse
 
 from contact_form.tests.base import ContactFormCase
-from contact_form.forms import ContactForm
+from contact_form.forms.uniform import ContactForm
 
 
 class TestContactForm(ContactFormCase):

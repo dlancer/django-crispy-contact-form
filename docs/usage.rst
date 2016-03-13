@@ -105,17 +105,32 @@ These options should be defined in your ``settings.py`` file.
 
 * ``CONTACT_FORM_SUBJECTS_ORDER_BY``: field for subjects sorting (default: 'order')
 
-Bootstrap based layout support
-------------------------------
+**Contact form class and template customization**
 
-At the moment only ``uni_form`` form layout is supported, for bootstrap or custom form layout,
-you should rewrite ``ContactForm`` and ``ContactFormCaptcha`` classes from forms.py
+* ``CONTACT_FORM_FORM_MODULE``: form module for contact form
+
+   default: contact_form.forms.uniform
+
+* ``CONTACT_FORM_FORM_CAPTCHA_MODULE``: form module for contact form with captcha
+
+   default: contact_form.forms.uniform
+
+Contact form modules included in ``django-crispy-contact-form`` package:
+
+    contact_form.forms.bootstrap
+    contact_form.forms.bootstrap3
+
+You can create your own form modules with proper ContactForm and ContactFormCaptcha classes.
+
+* ``CONTACT_FORM_FORM_TEMPLATE``: contact form template
+
+    default: contact_form/form.html
 
 
 Captcha rendering
 -----------------
 
 If you use ``django-simple-captcha`` package for rendering contact form with captcha support you
-should override captcha field templates (see ``django-simple-captcha`` package documentation) for
-proper form rendering. You can find recommended templates in docs/example/templates/captcha folder within
-``django-crispy-contact-form`` package documentation.
+can override captcha field templates (see ``django-simple-captcha`` package documentation) for
+proper form rendering. You can find recommended templates for ``uni_from`` template pack in the
+``docs/example/templates/captcha`` folder within ``django-crispy-contact-form`` package documentation.
