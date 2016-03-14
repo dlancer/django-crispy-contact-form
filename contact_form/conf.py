@@ -51,5 +51,7 @@ class ContactFormAppConf(AppConf):
 
     FORM_TEMPLATE = getattr(settings, 'CONTACT_FORM_FORM_TEMPLATE', 'contact_form/form.html')
 
+    RENDER_CANCEL_BUTTON = getattr(settings, 'CONTACT_FORM_RENDER_CANCEL_BUTTON', False)
+
     class Meta:
         prefix = 'contact_form'

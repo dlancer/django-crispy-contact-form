@@ -78,6 +78,9 @@ class ContactForm(forms.ModelForm):
                 Submit('submit', _('Submit')),
             )
         )
+        if not settings.CONTACT_FORM_RENDER_CANCEL_BUTTON:
+            layout[1].pop(0)
+
         self.helper.add_layout(layout)
         self.helper.form_id = 'contact_form'
         self.helper.form_action = ''
@@ -130,6 +133,9 @@ class ContactFormCaptcha(ContactForm):
                 Submit('submit', _('Submit')),
             )
         )
+        if not settings.CONTACT_FORM_RENDER_CANCEL_BUTTON:
+            layout[1].pop(0)
+
         self.helper.add_layout(layout)
         self.helper.form_id = 'contact_form'
         self.helper.form_action = ''

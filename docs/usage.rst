@@ -126,6 +126,12 @@ You can create your own form modules with proper ContactForm and ContactFormCapt
 
     default: contact_form/form.html
 
+**Contact form standard layout customization**
+
+* ``CONTACT_FORM_RENDER_CANCEL_BUTTON``: render cancel button (default: False)
+
+You can use your own javascript handler for cancel button if you enable this option.
+
 
 Captcha rendering
 -----------------
