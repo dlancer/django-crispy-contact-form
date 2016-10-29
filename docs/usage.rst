@@ -65,6 +65,8 @@ These options should be defined in your ``settings.py`` file.
 
 * ``CONTACT_FORM_USE_CAPTCHA``: force use captcha for anonymous users
 
+* ``CONTACT_FORM_USE_RECAPTCHA``: force use recaptcha for anonymous users
+
 * ``CONTACT_FORM_USE_SIGNALS``: send signals after form submitting
 
 * ``CONTACT_FORM_SUCCESS_URL``: url for redirection after successful form submission
@@ -146,3 +148,9 @@ If you use ``django-simple-captcha`` package for rendering contact form with cap
 can override captcha field templates (see ``django-simple-captcha`` package documentation) for
 proper form rendering. You can find recommended templates for ``uni_from`` template pack in the
 ``docs/example/templates/captcha`` folder within ``django-crispy-contact-form`` package documentation.
+
+ReCaptcha support
+-----------------
+
+If you want use ReCaptcha service instead of ``django-simple-captcha`` package, you should
+install ``django-recaptcha`` package and use CONTACT_FORM_USE_RECAPTCHA option in your project settings.

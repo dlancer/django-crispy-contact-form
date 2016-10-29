@@ -30,7 +30,7 @@ class SubjectAdmin(SubjectBaseAdmin):
     ordering = ('order',)
 
     def department_url(self, obj):
-        change_url = urlresolvers.reverse('admin:contact_form_department_change', args=(obj.department.id,))
+        change_url = urlresolvers.reverse('admin:contact_form_department_change', args=(obj.department.pk,))
         return '<a href="{0:>s}">{1:>s}</a>'.format(change_url, obj.department.name)
     department_url.allow_tags = True
     department_url.short_description = _('Department')

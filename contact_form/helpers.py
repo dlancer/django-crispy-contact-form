@@ -1,7 +1,8 @@
 try:
     from ipware.ip import get_ip, get_real_ip
 except ImportError:
-    raise 'django-crispy-contact-form application required django-ipware package'
+    from django.core.exceptions import ImproperlyConfigured
+    raise ImproperlyConfigured('django-crispy-contact-form application requires django-ipware package')
 
 
 def get_user_ip(request):

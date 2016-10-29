@@ -22,7 +22,7 @@ class Department(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return '/department/{0:>s}'.format(self.id)
+        return '/department/{0:>s}'.format(self.pk)
 
     class Meta:
         app_label = 'contact_form'

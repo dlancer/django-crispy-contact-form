@@ -16,7 +16,7 @@ class TestContactForm(ContactFormCase):
         data = dict(
             sender_name='test',
             sender_email='test@test.com',
-            subject=self.subject_foo.id,
+            subject=self.subject_foo.pk,
             message='test message from user foo',
             captcha='',
         )

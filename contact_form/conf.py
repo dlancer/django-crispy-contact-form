@@ -8,6 +8,7 @@ from appconf import AppConf
 class ContactFormAppConf(AppConf):
 
     USE_CAPTCHA = getattr(settings, 'CONTACT_FORM_USE_CAPTCHA', False)
+    USE_RECAPTCHA = getattr(settings, 'CONTACT_FORM_USE_RECAPTCHA', False)
     USE_SIGNALS = getattr(settings, 'CONTACT_FORM_USE_SIGNALS', False)
     SUCCESS_URL = getattr(settings, 'CONTACT_FORM_SUCCESS_URL', reverse_lazy('contact_form'))
     USE_SITES = getattr(settings, 'CONTACT_FORM_USE_SITES', True)

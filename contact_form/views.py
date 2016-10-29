@@ -6,16 +6,16 @@ from django.views.generic import CreateView
 
 import importlib
 
-try:
-    import bleach
-except ImportError:
-    raise 'django-crispy-contact-form application required bleach package'
-
 from appcore.views.mixins import FormMessageMixin
-
 from contact_form.conf import settings
 from contact_form.signals import contact_form_valid, contact_form_invalid
 from contact_form.helpers import get_user_ip
+
+try:
+    import bleach
+except ImportError:
+    from django.core.exceptions import ImproperlyConfigured
+    raise ImproperlyConfigured('django-crispy-contact-form application requires bleach package')
 
 form_module = importlib.import_module(settings.CONTACT_FORM_FORM_MODULE)
 form_captcha_module = importlib.import_module(settings.CONTACT_FORM_FORM_CAPTCHA_MODULE)
@@ -40,7 +40,7 @@ class ContactFormView(FormMessageMixin, CreateView):
             is_authenticated = self.request.user.is_authenticated()
         else:
             is_authenticated = False
-        if not is_authenticated and settings.CONTACT_FORM_USE_CAPTCHA:
+        if not is_authenticated and (settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA):
             self.form_class = form_captcha_module.ContactFormCaptcha
         else:
             self.form_class = form_module.ContactForm

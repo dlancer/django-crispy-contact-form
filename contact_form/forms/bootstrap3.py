@@ -4,26 +4,33 @@ from __future__ import unicode_literals
 
 from django import forms
 from django.utils.translation import ugettext_lazy as _
+from django.core.exceptions import ImproperlyConfigured
+
+from contact_form.conf import settings
+from contact_form.models import Message, Subject
 
 try:
     import bleach
 except ImportError:
-    raise 'django-crispy-contact-form application required bleach package'
+    raise ImproperlyConfigured('django-crispy-contact-form application requires bleach package')
 
-try:
-    from captcha.fields import CaptchaField
-except ImportError:
-    raise 'django-crispy-contact-form application required django-simple-captcha package'
+if settings.CONTACT_FORM_USE_RECAPTCHA:
+    try:
+        from captcha.fields import ReCaptchaField as CaptchaField
+    except ImportError:
+        raise ImproperlyConfigured('django-crispy-contact-form application requires django-recaptcha package')
+else:
+    try:
+        from captcha.fields import CaptchaField
+    except ImportError:
+        raise ImproperlyConfigured('django-crispy-contact-form application requires django-simple-captcha package')
 
 try:
     from crispy_forms.helper import FormHelper
     from crispy_forms.layout import Layout, Fieldset, Button, Submit
     from crispy_forms.bootstrap import FormActions
 except ImportError:
-    raise 'django-crispy-contact-form application required django-crispy-forms package'
-
-from contact_form.conf import settings
-from contact_form.models import Message, Subject
+    raise ImproperlyConfigured('django-crispy-contact-form application requires django-crispy-forms package')
 
 
 class ContactForm(forms.ModelForm):
