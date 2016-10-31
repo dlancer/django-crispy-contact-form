@@ -30,11 +30,11 @@ Requirements
 ::
 
     Django>=1.7,<1.10
-    Pillow>=3.3.0
+    Pillow>=3.4.2
     django-appcore>=0.0.8
-    django-simple-captcha>=0.5.2
-    django-crispy-forms>=1.6
-    django-ipware>=1.1.5
+    django-simple-captcha>=0.5.3
+    django-crispy-forms>=1.6.1
+    django-ipware>=1.1.6
     bleach>=1.4
 
 
