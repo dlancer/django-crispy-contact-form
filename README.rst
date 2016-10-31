@@ -44,4 +44,4 @@ Usage
 This contact form do not send messages or emails. All submitted information stored in the database
 and optional Django signals generated about submission. You may setup your own handlers for these signals.
 
-You may find detailed documentation in the "docs" directory.
+You can find detailed documentation in the "docs" directory.
