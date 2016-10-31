@@ -152,5 +152,7 @@ proper form rendering. You can find recommended templates for ``uni_from`` templ
 ReCaptcha support
 -----------------
 
-If you want use ReCaptcha service instead of ``django-simple-captcha`` package, you should
-install ``django-recaptcha`` package and use CONTACT_FORM_USE_RECAPTCHA option in your project settings.
+If you want use ReCaptcha service instead of ``django-simple-captcha`` application you should
+install ``django-recaptcha`` application and use CONTACT_FORM_USE_RECAPTCHA option in your project settings.
+Please notice what ``django-simple-captcha`` and ``django-recaptcha`` use the same package name for installation,
+so if you need botch packages in your project, you should move one application to another directory.
