@@ -29,13 +29,13 @@ Requirements
 
 ::
 
-    Django>=1.7,<1.10
+    Django>=1.7,<1.11
     Pillow>=3.4.2
-    django-appcore>=0.0.8
+    django-appcore>=0.0.9
     django-simple-captcha>=0.5.3
     django-crispy-forms>=1.6.1
     django-ipware>=1.1.6
-    bleach>=1.4
+    bleach>=1.5.0
 
 
 Usage

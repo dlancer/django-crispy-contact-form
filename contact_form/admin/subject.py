@@ -35,4 +35,5 @@ class SubjectAdmin(SubjectBaseAdmin):
     department_url.allow_tags = True
     department_url.short_description = _('Department')
 
+
 admin.site.register(Subject, SubjectAdmin)

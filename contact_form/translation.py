@@ -6,4 +6,5 @@ class SubjectTranslationOptions(TranslationOptions):
     fields = ('title', 'description')
     fallback_languages = {'default': ('en',)}
 
+
 translator.register(Subject, SubjectTranslationOptions)

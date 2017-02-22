@@ -30,4 +30,5 @@ class MessageAdmin(admin.ModelAdmin):
     date_created_short.short_description = _('Created')
     date_created_short.admin_order_field = 'date_created'
 
+
 admin.site.register(Message, MessageAdmin)

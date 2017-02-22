@@ -11,6 +11,7 @@ def get_version():
     """
     return '.'.join(str(i) for i in VERSION[:3])
 
+
 __author__ = 'dlancer'
 __docformat__ = 'restructuredtext en'
 __copyright__ = 'Copyright 2014-2016, dlancer'

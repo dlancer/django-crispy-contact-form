@@ -15,4 +15,5 @@ class DepartmentAdmin(admin.ModelAdmin):
         list_display = ('name', 'email', 'phone')
         exclude = ('site', )
 
+
 admin.site.register(Department, DepartmentAdmin)
