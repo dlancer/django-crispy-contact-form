@@ -20,9 +20,9 @@ matrix:
     - python: "3.6"
       env: DJANGO="django==1.9.12"
     - python: "3.5"
-      env: DJANGO="django==1.10.5"
+      env: DJANGO="django==1.10.6"
     - python: "3.6"
-      env: DJANGO="django==1.10.5"
+      env: DJANGO="django==1.10.6"
 
 install:
   - pip install $DJANGO
