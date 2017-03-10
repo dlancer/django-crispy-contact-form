@@ -6,13 +6,20 @@ from django import forms
 from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import ImproperlyConfigured
 
-from contact_form.conf import settings
-from contact_form.models import Message, Subject
-
 try:
     import bleach
 except ImportError:
     raise ImproperlyConfigured('django-crispy-contact-form application requires bleach package')
+
+try:
+    from crispy_forms.helper import FormHelper
+except ImportError:
+    raise ImproperlyConfigured('django-crispy-contact-form application requires django-crispy-forms package')
+
+from crispy_forms.layout import Layout, Fieldset, Button, ButtonHolder, Submit
+
+from ..conf import settings
+from ..models import Message, Subject
 
 if settings.CONTACT_FORM_USE_RECAPTCHA:
     try:
@@ -24,12 +31,6 @@ else:
         from captcha.fields import CaptchaField
     except ImportError:
         raise ImproperlyConfigured('django-crispy-contact-form application requires django-simple-captcha package')
-
-try:
-    from crispy_forms.helper import FormHelper
-    from crispy_forms.layout import Layout, Fieldset, Button, ButtonHolder, Submit
-except ImportError:
-    raise ImproperlyConfigured('django-crispy-contact-form application requires django-crispy-forms package')
 
 
 class ContactForm(forms.ModelForm):

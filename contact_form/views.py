@@ -2,20 +2,22 @@
 
 from __future__ import unicode_literals
 
-from django.views.generic import CreateView
-
 import importlib
-
-from appcore.views.mixins import FormMessageMixin
-from contact_form.conf import settings
-from contact_form.signals import contact_form_valid, contact_form_invalid
-from contact_form.helpers import get_user_ip
 
 try:
     import bleach
 except ImportError:
     from django.core.exceptions import ImproperlyConfigured
     raise ImproperlyConfigured('django-crispy-contact-form application requires bleach package')
+
+from django.views.generic import CreateView
+
+from appcore.views.mixins import FormMessageMixin
+
+from .conf import settings
+from .signals import contact_form_valid, contact_form_invalid
+from .helpers import get_user_ip
+
 
 form_module = importlib.import_module(settings.CONTACT_FORM_FORM_MODULE)
 form_captcha_module = importlib.import_module(settings.CONTACT_FORM_FORM_CAPTCHA_MODULE)

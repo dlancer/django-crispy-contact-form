@@ -7,7 +7,7 @@ from django.utils.translation import ugettext_lazy as _
 from django.contrib.sites.models import Site
 from django.utils.encoding import python_2_unicode_compatible
 
-from contact_form.conf import settings
+from ..conf import settings
 
 
 @python_2_unicode_compatible
