@@ -1,1 +1,2 @@
 django-crispy-contact-form>=0.3.2
+django-simple-captcha>=0.5.3

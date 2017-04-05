@@ -20,7 +20,9 @@ from .helpers import get_user_ip
 
 
 form_module = importlib.import_module(settings.CONTACT_FORM_FORM_MODULE)
-form_captcha_module = importlib.import_module(settings.CONTACT_FORM_FORM_CAPTCHA_MODULE)
+
+if settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA:
+    form_captcha_module = importlib.import_module(settings.CONTACT_FORM_FORM_CAPTCHA_MODULE)
 
 
 class ContactFormView(FormMessageMixin, CreateView):

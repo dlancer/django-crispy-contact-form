@@ -1,4 +1,4 @@
-"""Implements contact form forms for bootstrap template pack"""
+"""Implements contact form forms for bootstrap4 template pack"""
 
 from __future__ import unicode_literals
 
@@ -73,6 +73,8 @@ class ContactForm(forms.ModelForm):
         :param kwargs: form keyword args
         """
         self.helper = FormHelper()
+        self.helper.label_class = 'col-lg-2'
+        self.helper.field_class = 'col-lg-8'
         layout = Layout(
             Fieldset(
                 _('Contact form'),
@@ -128,6 +130,8 @@ if settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA:
             :param kwargs: form keyword args
             """
             self.helper = FormHelper()
+            self.helper.label_class = 'col-lg-2'
+            self.helper.field_class = 'col-lg-8'
             layout = Layout(
                 Fieldset(
                     _('Contact form'),
