@@ -30,13 +30,8 @@ Include the contact form URLconf in your project urls.py like this::
         url(r'^contact_form/', include('contact_form.urls')),
     )
 
-Run ``python manage.py syncdb``.
+Run ``python manage.py migrate``.
 This creates the appropriate tables in your database that are necessary for operation.
-
-Database migration
-------------------
-
-Django 1.7+ has native database migration support.
 
 
 Multilingual support
@@ -121,7 +116,10 @@ These options should be defined in your ``settings.py`` file.
 Contact form modules included in ``django-crispy-contact-form`` package:
 
     contact_form.forms.bootstrap
+
     contact_form.forms.bootstrap3
+
+    contact_form.forms.bootstrap4
 
 You can create your own form modules with proper ContactForm and ContactFormCaptcha classes.
 
