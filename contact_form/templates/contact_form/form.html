@@ -1,11 +1,12 @@
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
-    <title>Contact Form Test</title>
+    <meta charset="UTF-8">
+    <title>Contact Form</title>
 </head>
 <body>
-{% load crispy_forms_tags crispy_forms_filters %}
 
 {% if messages %}
 <ul>
@@ -16,6 +17,6 @@
 {% endif %}
 
 {% crispy form form.helper %}
+
 </body>
 </html>
-
