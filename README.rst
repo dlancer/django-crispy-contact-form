@@ -29,8 +29,7 @@ Requirements
 
 ::
 
-    Django>=1.7,<1.11
-    Pillow>=3.4.2
+    Django>=1.7,<2.0
     django-appcore>=0.0.9
     django-crispy-forms>=1.6.1
     django-ipware>=1.1.6
@@ -43,9 +42,8 @@ Requirements
 
 ::
 
-    django-simple-captcha>=0.5.3
+    django-simple-captcha>=0.5.5
     django-recaptcha>=1.2.1
-
 
 Usage
 =====
