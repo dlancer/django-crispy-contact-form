@@ -73,8 +73,8 @@ class ContactForm(forms.ModelForm):
         :param kwargs: form keyword args
         """
         self.helper = FormHelper()
-        self.helper.label_class = 'col-lg-2'
-        self.helper.field_class = 'col-lg-8'
+        self.helper.label_class = settings.FORM_LABEL_CLASS
+        self.helper.field_class = settings.FORM_FIELD_CLASS
         layout = Layout(
             Fieldset(
                 _('Contact form'),
@@ -130,8 +130,8 @@ if settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA:
             :param kwargs: form keyword args
             """
             self.helper = FormHelper()
-            self.helper.label_class = 'col-lg-2'
-            self.helper.field_class = 'col-lg-8'
+            self.helper.label_class = settings.FORM_LABEL_CLASS
+            self.helper.field_class = settings.FORM_FIELD_CLASS
             layout = Layout(
                 Fieldset(
                     _('Contact form'),

@@ -131,6 +131,10 @@ You can create your own form modules with proper ContactForm and ContactFormCapt
 
 * ``CONTACT_FORM_RENDER_CANCEL_BUTTON``: render cancel button (default: False)
 
+* ``CONTACT_FORM_FORM_LABEL_CLASS``: form label class (bootstrap3 customization)
+
+* ``CONTACT_FORM_FORM_FIELD_CLASS``: form field class (bootstrap3 customization)
+
 You can use your own javascript handler for cancel button if you enable this option.
 
 
