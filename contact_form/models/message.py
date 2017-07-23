@@ -2,7 +2,6 @@
 
 from __future__ import unicode_literals
 
-import django
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
@@ -36,9 +35,5 @@ class MessageBase(models.Model):
         verbose_name_plural = _('Messages')
 
 
-if django.VERSION < (1, 7):
-    class Message(MessageBase):
-        ip = models.IPAddressField(_('IP'), null=True, blank=True)
-else:
-    class Message(MessageBase):
-        ip = models.GenericIPAddressField(_('IP'), null=True, blank=True)
+class Message(MessageBase):
+    ip = models.GenericIPAddressField(_('IP'), null=True, blank=True)
