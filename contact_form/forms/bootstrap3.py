@@ -74,8 +74,8 @@ class ContactForm(forms.ModelForm):
         """
         self.helper = FormHelper()
         self.helper.form_class = 'form-horizontal'
-        self.helper.label_class = settings.FORM_LABEL_CLASS
-        self.helper.field_class = settings.FORM_FIELD_CLASS
+        self.helper.label_class = settings.CONTACT_FORM_FORM_LABEL_CLASS
+        self.helper.field_class = settings.CONTACT_FORM_FORM_FIELD_CLASS
         layout = Layout(
             Fieldset(
                 _('Contact form'),
@@ -132,8 +132,8 @@ if settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA:
             """
             self.helper = FormHelper()
             self.helper.form_class = 'form-horizontal'
-            self.helper.label_class = settings.FORM_LABEL_CLASS
-            self.helper.field_class = settings.FORM_FIELD_CLASS
+            self.helper.label_class = settings.CONTACT_FORM_FORM_LABEL_CLASS
+            self.helper.field_class = settings.CONTACT_FORM_FORM_FIELD_CLASS
             layout = Layout(
                 Fieldset(
                     _('Contact form'),
