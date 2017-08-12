@@ -4,7 +4,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.sites.models import Site
 from django.utils.encoding import python_2_unicode_compatible
 
 from ..conf import settings
@@ -16,7 +15,9 @@ class Department(models.Model):
     # max_length overridden to 254 characters for compliant with RFCs 3696 and 5321
     email = models.EmailField(max_length=254)
     phone = models.CharField(max_length=settings.CONTACT_FORM_DEPARTMENT_PHONE_MAX_LENGTH, blank=True)
-    site = models.ForeignKey(Site, null=True, blank=True)
+    if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
+        from django.contrib.sites.models import Site
+        site = models.ForeignKey(Site, null=True, blank=True)
 
     def __str__(self):
         return self.name

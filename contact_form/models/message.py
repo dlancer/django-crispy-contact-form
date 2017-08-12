@@ -5,7 +5,6 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
-from django.contrib.sites.models import Site
 from django.utils.encoding import python_2_unicode_compatible
 
 from ..conf import settings
@@ -23,7 +22,9 @@ class MessageBase(models.Model):
     subject = models.ForeignKey(Subject, verbose_name=_('Subject'))
     message = models.TextField(verbose_name=_('Message'), max_length=settings.CONTACT_FORM_MESSAGE_MAX_LENGTH)
     date_created = models.DateTimeField(_('Created'), default=timezone.now)
-    site = models.ForeignKey(Site, null=True, blank=True)
+    if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
+        from django.contrib.sites.models import Site
+        site = models.ForeignKey(Site, null=True, blank=True)
 
     def __str__(self):
         return 'message {0:>n}'.format(self.pk)

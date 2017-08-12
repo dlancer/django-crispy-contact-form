@@ -63,6 +63,9 @@ These options should be defined in your ``settings.py`` file.
 
 * ``CONTACT_FORM_USE_SITES``: use Django Sites framework
 
+*Please notice what app migrations require enabled Sites framework for initial migration.
+You can disable it later and add your own custom migration for database cleanup.*
+
 * ``CONTACT_FORM_FILTER_SENDER_NAME``: filter sender name field
 
 * ``CONTACT_FORM_FILTER_MESSAGE``: filter message field
