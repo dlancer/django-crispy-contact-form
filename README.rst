@@ -11,10 +11,6 @@ Customizable contact form based on crispy-forms
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: Latest PyPI version
 
-.. image:: https://img.shields.io/pypi/dm/django-crispy-contact-form.svg
-    :target: https://pypi.python.org/pypi/django-crispy-contact-form/
-    :alt: Number of PyPI downloads
-
 .. image:: https://img.shields.io/pypi/format/django-crispy-contact-form.svg
     :target: https://pypi.python.org/pypi/django-crispy-contact-form/
     :alt: Download format
