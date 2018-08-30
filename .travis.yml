@@ -2,37 +2,24 @@ language: python
 
 python:
   - "2.7"
-  - "3.3"
   - "3.4"
+  - "3.5"
 
 env:
   - DJANGO="django==1.8.18"
-  - DJANGO="django==1.7.11"
+  - DJANGO="django==1.9.13"
+  - DJANGO="django==1.10.7"
 
 matrix:
   include:
-    - python: "3.5"
-      env: DJANGO="django==1.8.18"
     - python: "2.7"
-      env: DJANGO="django==1.9.13"
+      env: DJANGO="django==1.11.15"
     - python: "3.4"
-      env: DJANGO="django==1.9.13"
+      env: DJANGO="django==1.11.15"
     - python: "3.5"
-      env: DJANGO="django==1.9.13"
-    - python: "2.7"
-      env: DJANGO="django==1.10.7"
-    - python: "3.4"
-      env: DJANGO="django==1.10.7"
-    - python: "3.5"
-      env: DJANGO="django==1.10.7"
-    - python: "2.7"
-      env: DJANGO="django==1.11.4"
-    - python: "3.4"
-      env: DJANGO="django==1.11.4"
-    - python: "3.5"
-      env: DJANGO="django==1.11.4"
+      env: DJANGO="django==1.11.15"
     - python: "3.6"
-      env: DJANGO="django==1.11.4"
+      env: DJANGO="django==1.11.15"
 
 install:
   - pip install $DJANGO
