@@ -17,7 +17,7 @@ class Department(models.Model):
     phone = models.CharField(max_length=settings.CONTACT_FORM_DEPARTMENT_PHONE_MAX_LENGTH, blank=True)
     if hasattr(settings, 'SITE_ID') and settings.CONTACT_FORM_USE_SITES:
         from django.contrib.sites.models import Site
-        site = models.ForeignKey(Site, null=True, blank=True)
+        site = models.ForeignKey(Site, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.name

@@ -19,7 +19,7 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=80)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone', models.CharField(max_length=20, blank=True)),
-                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True)),
+                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'verbose_name': 'Department',
@@ -36,7 +36,7 @@ class Migration(migrations.Migration):
                 ('message', models.TextField(max_length=4096, verbose_name='Message')),
                 ('ip', models.IPAddressField(null=True, verbose_name='IP', blank=True)),
                 ('date_created', models.DateTimeField(default=django.utils.timezone.now, verbose_name='Created')),
-                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True)),
+                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'verbose_name': 'Message',
@@ -50,8 +50,8 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
                 ('title', models.CharField(max_length=80)),
                 ('description', models.TextField(blank=True)),
-                ('department', models.ForeignKey(to='contact_form.Department')),
-                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True)),
+                ('department', models.ForeignKey(to='contact_form.Department', on_delete=models.CASCADE)),
+                ('site', models.ForeignKey(blank=True, to='sites.Site', null=True, on_delete=models.CASCADE)),
             ],
             options={
                 'verbose_name': 'Subject',
@@ -62,7 +62,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='message',
             name='subject',
-            field=models.ForeignKey(verbose_name='Subject', to='contact_form.Subject'),
+            field=models.ForeignKey(verbose_name='Subject', to='contact_form.Subject', on_delete=models.CASCADE),
             preserve_default=True,
         ),
     ]

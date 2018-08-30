@@ -2,7 +2,11 @@ from __future__ import unicode_literals
 
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse_lazy
+try:
+    from django.core.urlresolvers import reverse_lazy
+except ImportError:
+    from django.urls import reverse_lazy
+
 from appconf import AppConf
 
 

@@ -3,7 +3,12 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
-from django.core import urlresolvers
+
+try:
+    from django.core.urlresolvers import reverse
+except ImportError:
+    from django.urls import reverse
+
 from django.utils.translation import ugettext as _
 
 from contact_form.conf import settings
@@ -30,7 +35,7 @@ class SubjectAdmin(SubjectBaseAdmin):
     ordering = ('order',)
 
     def department_url(self, obj):
-        change_url = urlresolvers.reverse('admin:contact_form_department_change', args=(obj.department.pk,))
+        change_url = reverse('admin:contact_form_department_change', args=(obj.department.pk,))
         return '<a href="{0:>s}">{1:>s}</a>'.format(change_url, obj.department.name)
     department_url.allow_tags = True
     department_url.short_description = _('Department')
