@@ -38,8 +38,8 @@ Optional Requirements
 
 ::
 
-    django-simple-captcha>=0.5.5
-    django-recaptcha>=1.3.1
+    django-simple-captcha>=0.5.9
+    django-recaptcha>=1.4.0
 
 Usage
 =====
