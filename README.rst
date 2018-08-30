@@ -1,7 +1,7 @@
 Customizable contact form based on crispy-forms
 ===============================================
 
-``django-crispy-contact-form`` is a contact form based on crispy-forms with captcha support for Django 1.7+
+``django-crispy-contact-form`` is a contact form based on crispy-forms with captcha support for Django 1.8+
 
 .. image:: https://travis-ci.org/dlancer/django-crispy-contact-form.svg?branch=master
     :target: https://travis-ci.org/dlancer/django-crispy-contact-form/

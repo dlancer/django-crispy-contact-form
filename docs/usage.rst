@@ -23,12 +23,12 @@ You must add these apps to your list of ``INSTALLED_APPS`` in ``settings.py``::
 
 Include the contact form URLconf in your project urls.py like this::
 
-    urlpatterns = patterns(
+    urlpatterns = [
     '',
         ...
         url(r'^captcha/', include('captcha.urls')),
         url(r'^contact_form/', include('contact_form.urls')),
-    )
+    ]
 
 Run ``python manage.py migrate``.
 This creates the appropriate tables in your database that are necessary for operation.
