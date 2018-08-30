@@ -3,6 +3,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from django.utils.html import format_html
 
 try:
     from django.core.urlresolvers import reverse
@@ -36,7 +37,8 @@ class SubjectAdmin(SubjectBaseAdmin):
 
     def department_url(self, obj):
         change_url = reverse('admin:contact_form_department_change', args=(obj.department.pk,))
-        return '<a href="{0:>s}">{1:>s}</a>'.format(change_url, obj.department.name)
+        return format_html('<a href="{}">{}</a>', change_url, obj.department.name)
+
     department_url.allow_tags = True
     department_url.short_description = _('Department')
 
