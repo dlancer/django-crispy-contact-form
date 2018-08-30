@@ -7,4 +7,4 @@
 *.egg-info
 __pycache__/*
 dist/*
-
+db.sqlite3
