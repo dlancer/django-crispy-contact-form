@@ -4,22 +4,13 @@ python:
   - "2.7"
   - "3.4"
   - "3.5"
+  - "3.6"
 
 env:
-  - DJANGO="django==1.8.18"
-  - DJANGO="django==1.9.13"
-  - DJANGO="django==1.10.7"
+  - DJANGO="django==1.11.15"
 
 matrix:
   include:
-    - python: "2.7"
-      env: DJANGO="django==1.11.15"
-    - python: "3.4"
-      env: DJANGO="django==1.11.15"
-    - python: "3.5"
-      env: DJANGO="django==1.11.15"
-    - python: "3.6"
-      env: DJANGO="django==1.11.15"
     - python: "3.4"
       env: DJANGO="django==2.0.8"
     - python: "3.5"
