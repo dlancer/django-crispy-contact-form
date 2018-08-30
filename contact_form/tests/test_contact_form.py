@@ -1,9 +1,6 @@
 from __future__ import unicode_literals
 
-try:
-    from django.core.urlresolvers import reverse
-except ImportError:
-    from django.urls import reverse
+from django.urls import reverse
 
 from contact_form.tests.base import ContactFormCase
 from contact_form.forms.uniform import ContactForm

@@ -10,7 +10,6 @@ except ImportError:
     from django.core.exceptions import ImproperlyConfigured
     raise ImproperlyConfigured('django-crispy-contact-form application requires bleach package')
 
-from django import VERSION as DJANGO_VERSION
 from django.views.generic import CreateView
 
 from appcore.views.mixins import FormMessageMixin
@@ -42,10 +41,7 @@ class ContactFormView(FormMessageMixin, CreateView):
 
     def get_form_class(self):
         if hasattr(self.request, 'user'):
-            if DJANGO_VERSION < (1, 10):
-                is_authenticated = self.request.user.is_authenticated()
-            else:
-                is_authenticated = self.request.user.is_authenticated
+            is_authenticated = self.request.user.is_authenticated
         else:
             is_authenticated = False
         if not is_authenticated and (settings.CONTACT_FORM_USE_CAPTCHA or settings.CONTACT_FORM_USE_RECAPTCHA):
@@ -59,11 +55,7 @@ class ContactFormView(FormMessageMixin, CreateView):
         sender_email = ''
         if hasattr(self.request, 'user'):
             user = self.request.user
-            if DJANGO_VERSION < (1, 10):
-                is_authenticated = user.is_authenticated()
-            else:
-                is_authenticated = user.is_authenticated
-            if settings.CONTACT_FORM_USE_USERNAME and is_authenticated:
+            if settings.CONTACT_FORM_USE_USERNAME and user.is_authenticated:
                 if hasattr(user, settings.CONTACT_FORM_USERNAME_FIELD):
                     sender_name = getattr(user, settings.CONTACT_FORM_USERNAME_FIELD)
                 if hasattr(user, settings.CONTACT_FORM_USER_EMAIL_FIELD):

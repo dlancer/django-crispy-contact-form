@@ -5,10 +5,7 @@ from __future__ import unicode_literals
 from django.contrib import admin
 from django.utils.html import format_html
 
-try:
-    from django.core.urlresolvers import reverse
-except ImportError:
-    from django.urls import reverse
+from django.urls import reverse
 
 from django.utils.translation import ugettext as _
 
