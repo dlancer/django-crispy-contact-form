@@ -1,4 +1,4 @@
-Django>=1.8,<2.0
+Django>=1.8,<2.2
 django-appcore>=0.0.9
 django-crispy-forms==1.7.2
 django-ipware==2.1.0
