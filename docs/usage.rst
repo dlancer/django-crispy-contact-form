@@ -31,15 +31,15 @@ Include the contact form URLconf in your project urls.py like this::
     ]
 
 Run ``python manage.py migrate``.
-This creates the appropriate tables in your database that are necessary for operation.
+This will create the appropriate tables in your database that are necessary for application.
 
+**Note:** captcha related settings only required if you want use captcha in your contact form.
 
 Multilingual support
 --------------------
 
 All messages and text strings translatable with standard Django i18n framework.
 Multilingual subjects supported with django-modeltranslation application. Default language is English.
-If you want add more languages you should use sync_translation_fields command.
 You may find more information in `django-modeltranslation documentation`_.
 
 .. _`django-modeltranslation documentation`: https://django-modeltranslation.readthedocs.org/en/latest/
@@ -63,7 +63,7 @@ These options should be defined in your ``settings.py`` file.
 
 * ``CONTACT_FORM_USE_SITES``: use Django Sites framework
 
-*Please notice what app migrations require enabled Sites framework for initial migration.
+*Please notice what application migrations require enabled Sites framework for initial migration.
 You can disable it later and add your own custom migration for database cleanup.*
 
 * ``CONTACT_FORM_FILTER_SENDER_NAME``: filter sender name field
@@ -82,11 +82,11 @@ You can disable it later and add your own custom migration for database cleanup.
 
 **User model related customization**
 
-* ``CONTACT_FORM_USE_USERNAME``: fill username form field for authenticated user
+* ``CONTACT_FORM_USE_USERNAME``: username form field will be populated for authenticated user
 
 * ``CONTACT_FORM_USERNAME_FIELD``: username field name in User model
 
-* ``CONTACT_FORM_USE_USER_EMAIL``: fill email form field for authenticated user
+* ``CONTACT_FORM_USE_USER_EMAIL``: email form field will be populated for authenticated user
 
 * ``CONTACT_FORM_USER_EMAIL_FIELD``: email field name in User model
 
