@@ -74,6 +74,8 @@ You can disable it later and add your own custom migration for database cleanup.
 
 * ``CONTACT_FORM_STRIP_MESSAGE``: strip not allowed tags from message
 
+* ``CONTACT_FORM_LINKS_NOT_ALLOWED``: do not allow submit messages with any links
+
 **Contact form submission message customization**
 
 * ``CONTACT_FORM_VALID_MESSAGE``: success message for valid form submission

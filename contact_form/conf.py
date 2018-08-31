@@ -18,7 +18,7 @@ class ContactFormAppConf(AppConf):
     FILTER_MESSAGE = getattr(settings, 'CONTACT_FORM_FILTER_MESSAGE', True)
     ALLOWED_MESSAGE_TAGS = getattr(settings, 'CONTACT_FORM_ALLOWED_MESSAGE_TAGS', [])
     STRIP_MESSAGE = getattr(settings, 'CONTACT_FORM_STRIP_MESSAGE', False)
-
+    LINKS_NOT_ALLOWED = getattr(settings, 'CONTACT_FORM_LINKS_NOT_ALLOWED', False)
     VALID_MESSAGE = getattr(
         settings,
         'CONTACT_FORM_VALID_MESSAGE',
