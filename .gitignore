@@ -8,4 +8,4 @@
 __pycache__/*
 dist/*
 build/*
-db.sqlite3
+db.dev.sqlite3
