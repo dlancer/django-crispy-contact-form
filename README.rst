@@ -27,10 +27,9 @@ Requirements
 
     Django>=1.11,<2.2
     django-appcore>=0.0.9
-    django-crispy-forms==1.7.2
-    django-ipware==2.1.0
-    bleach==2.1.4
-
+    django-crispy-forms>=1.7.2
+    django-ipware>=2.1.0
+    bleach>=2.1.4,<3.0
 
 
 Optional Requirements
