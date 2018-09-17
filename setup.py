@@ -1,4 +1,5 @@
 import os
+
 from setuptools import setup, find_packages
 from contact_form import get_version as get_package_version
 
@@ -16,7 +17,7 @@ setup(
     include_package_data=True,
     install_requires=reqs,
     license='BSD',
-    description='Customizable contact form based on crispy-forms with captcha support for Django 1.8+',
+    description='Customizable contact form based on crispy-forms with captcha support for Django 1.11+',
     long_description=README,
     url='https://github.com/dlancer/django-crispy-contact-form',
     author='dlancer',
